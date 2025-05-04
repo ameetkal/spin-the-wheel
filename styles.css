@@ -16,15 +16,19 @@ body {
 .container {
     text-align: center;
     color: #333;
-    padding: 2rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .logo-container {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .logo {
     max-width: 300px;
+    width: 100%;
     height: auto;
 }
 
@@ -37,8 +41,8 @@ body {
 }
 
 h1 {
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
     color: #333;
     text-shadow: none;
 }
@@ -46,10 +50,14 @@ h1 {
 .wheel-container {
     position: relative;
     display: inline-block;
-    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 #wheel {
+    width: 100%;
+    height: auto;
     background: white;
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -74,8 +82,8 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
     font-weight: bold;
     background: #ff6b6b;
     color: white;
@@ -96,7 +104,10 @@ h1 {
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    min-width: 300px;
+    min-width: 280px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .legend h2 {
@@ -119,6 +130,7 @@ h1 {
     gap: 0.5rem;
     background: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-size: 0.9rem;
 }
 
 #prize-list li::before {
@@ -140,16 +152,17 @@ h1 {
     justify-content: center;
     align-items: center;
     z-index: 2;
+    padding: 1rem;
 }
 
 .modal-content {
     background: white;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
     color: #333;
+    width: 100%;
     max-width: 400px;
-    width: 90%;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
     position: relative;
     z-index: 3;
@@ -158,10 +171,11 @@ h1 {
 .modal-content h2 {
     margin-bottom: 1rem;
     color: #2a5298;
+    font-size: 1.5rem;
 }
 
 #prize-text {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: 1rem 0;
     color: #ff6b6b;
 }
@@ -180,4 +194,68 @@ h1 {
 #restart-btn:hover {
     background: #1e3c72;
     transform: scale(1.05);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        padding: 0.5rem;
+    }
+
+    .logo {
+        max-width: 200px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .content-wrapper {
+        gap: 1rem;
+    }
+
+    .wheel-container {
+        max-width: 300px;
+    }
+
+    .legend {
+        padding: 1rem;
+    }
+
+    .legend h2 {
+        font-size: 1.2rem;
+    }
+
+    #prize-list li {
+        font-size: 0.8rem;
+        padding: 0.4rem;
+    }
+
+    .modal-content {
+        padding: 1rem;
+    }
+
+    .modal-content h2 {
+        font-size: 1.2rem;
+    }
+
+    #prize-text {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .wheel-container {
+        max-width: 250px;
+    }
+
+    #spin-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+    }
+
+    .legend {
+        min-width: 250px;
+    }
 } 

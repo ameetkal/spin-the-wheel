@@ -157,6 +157,24 @@ function restart() {
 spinBtn.addEventListener('click', spinWheel);
 restartBtn.addEventListener('click', restart);
 
+// Add this function to handle responsive canvas
+function resizeCanvas() {
+    const container = document.querySelector('.wheel-container');
+    const canvas = document.getElementById('wheel');
+    const containerWidth = container.offsetWidth;
+    
+    // Set canvas size to match container width
+    canvas.width = containerWidth;
+    canvas.height = containerWidth;
+    
+    // Redraw the wheel
+    drawWheel();
+}
+
+// Add event listeners for window resize
+window.addEventListener('resize', resizeCanvas);
+window.addEventListener('load', resizeCanvas);
+
 // Initialize
 createLegend();
 drawWheel(); 
