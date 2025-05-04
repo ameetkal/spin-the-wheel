@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prize Wheel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="glammatic-logo.png" alt="Glammatic Logo" class="logo">
+        </div>
+        <h1>Spin the Wheel!</h1>
+        <div class="content-wrapper">
+            <div class="wheel-container">
+                <canvas id="wheel" width="500" height="500"></canvas>
+                <button id="spin-btn">SPIN</button>
+                <div class="ticker"></div>
+            </div>
+            <div class="legend">
+                <h2>Prize List</h2>
+                <ul id="prize-list"></ul>
+            </div>
+        </div>
+        <div id="result-modal" class="modal">
+            <div class="modal-content">
+                <h2>Congratulations!</h2>
+                <p id="prize-text"></p>
+                <button id="restart-btn">Spin Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
